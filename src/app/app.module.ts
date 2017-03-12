@@ -3,12 +3,14 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { FavoritesPage } from '../pages/favorites/favorites';
+import { WeatherPage } from '../pages/weather/weather';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    FavoritesPage
+    FavoritesPage,
+    WeatherPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -17,7 +19,8 @@ import { FavoritesPage } from '../pages/favorites/favorites';
   entryComponents: [
     MyApp,
     HomePage,
-    FavoritesPage
+    FavoritesPage,
+    WeatherPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
