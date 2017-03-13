@@ -1,16 +1,39 @@
 <ion-header no-border>
   <ion-navbar hideBackButton>
     <ion-buttons start>
-      <button ion-button icon-only (click)="presentFavoritesModal()">
+      <button ion-button icon-only (click)="showFavoritesModal()">
         <ion-icon name="menu"></ion-icon>
       </button>
     </ion-buttons>
     <ion-title>
       <ion-icon item-right name="umbrella"></ion-icon>
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="favoriteCity()">
+        <ion-icon name="heart-outline"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding text-center class="weather-content">
-  weather info
+  <ion-grid *ngIf="weather">
+    <ion-row>
+      <ion-col width-50 offset-25>
+        <h3>TODAY</h3>
+        <h3>{{weather.city.name}}, {{weather.city.country}}</h3>
+        <div><img src="http://openweathermap.org/img/w/{{weather.list[0].weather[0].icon}}.png"></div>
+        <h4>{{weather.list[0].main.temp_max}} &deg;C</h4>
+        <h4>{{weather.list[0].main.temp_min}} &deg;C</h4>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-3 *ngFor="let number of [1, 2, 3, 4]">
+        <h5>{{number | day}}</h5>
+        <div><img src="http://openweathermap.org/img/w/{{weather.list[number*8].weather[0].icon}}.png"></div>
+        <h5>{{weather.list[number*8].main.temp_max}} &deg;C</h5>
+        <h5>{{weather.list[number*8].main.temp_min}} &deg;C</h5>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
