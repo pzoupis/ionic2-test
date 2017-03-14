@@ -14,3 +14,28 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+@font-face {
+    font-family: 'Biko';
+    font-weight: 300;
+    font-style: normal;
+    src: local("Biko Light"), local("Biko_Light"), url("../assets/fonts/Biko_Light.otf");
+}
+@font-face {
+    font-family: 'Biko';
+    font-weight: 400;
+    font-style: normal;
+    src: local("Biko"), local("Biko_Regular"), url("../assets/fonts/Biko_Regular.otf");
+}
+@font-face {
+    font-family: 'Biko';
+    font-weight: 700;
+    font-style: normal;
+    src: local("Biko Black"), local("Biko_Black"), url("../assets/fonts/Biko_Black.otf");
+}
+@font-face {
+    font-family: 'Biko';
+    font-weight: 500;
+    font-style: normal;
+    src: local("Biko Bold"), local("Biko_Bold"), url("../assets/fonts/Biko_Bold.otf");
+}

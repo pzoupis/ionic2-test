@@ -23,16 +23,16 @@
         <h3>TODAY</h3>
         <h3>{{weather.city.name}}, {{weather.city.country}}</h3>
         <div><img src="http://openweathermap.org/img/w/{{weather.list[0].weather[0].icon}}.png"></div>
-        <h4>{{weather.list[0].main.temp_max}} &deg;C</h4>
-        <h4>{{weather.list[0].main.temp_min}} &deg;C</h4>
+        <h4>{{weather.list[0].temp.max}} &deg;C</h4>
+        <h4>{{weather.list[0].temp.min}} &deg;C</h4>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-3 *ngFor="let number of [1, 2, 3, 4]">
+      <ion-col col-3 *ngFor="let number of [1, 2, 3, 4, 5]">
         <h5>{{number | day}}</h5>
-        <div><img src="http://openweathermap.org/img/w/{{weather.list[number*8].weather[0].icon}}.png"></div>
-        <h5>{{weather.list[number*8].main.temp_max}} &deg;C</h5>
-        <h5>{{weather.list[number*8].main.temp_min}} &deg;C</h5>
+        <div><img src="http://openweathermap.org/img/w/{{weather.list[number].weather[0].icon}}.png"></div>
+        <h5>{{weather.list[number].temp.max}} &deg;C</h5>
+        <h5>{{weather.list[number].temp.min}} &deg;C</h5>
       </ion-col>
     </ion-row>
   </ion-grid>

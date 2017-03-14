@@ -2,5 +2,15 @@
   "name": "myBlank",
   "app_id": "54106411",
   "v2": true,
-  "typescript": true
+  "typescript": true,
+  "proxies": [
+    {
+      "path": "/weather",
+      "proxyUrl": "http://api.openweathermap.org"
+    },
+    {
+      "path": "/autocomplete",
+      "proxyUrl": "https://maps.googleapis.com"
+    }
+  ]
 }
