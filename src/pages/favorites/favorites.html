@@ -14,7 +14,7 @@
       add a city
   </button>
   <ion-list class="city">
-    <ion-item *ngFor="let city of cities">
+    <ion-item *ngFor="let city of cities" (click)="showWeather(city)">
       {{city}}
       <ion-icon item-right name="close" (click)="deleteCity(city)"></ion-icon>
     </ion-item>

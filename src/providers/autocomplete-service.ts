@@ -6,7 +6,7 @@ import 'rxjs/Rx';
 @Injectable()
 export class AutocompleteService {
   private apiKey = ''; // add API key here
-  private baseUrl = 'http://localhost:8100/autocomplete/maps/api/place/autocomplete/json?input=';
+  private baseUrl = '/autocomplete-service/maps/api/place/autocomplete/json?input=';
   
   constructor(public http: Http) { }
 

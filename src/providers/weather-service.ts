@@ -6,7 +6,7 @@ import 'rxjs/Rx';
 @Injectable()
 export class WeatherService {
   private apiKey = ''; // add API key here
-  private baseUrl = 'weather/data/2.5/forecast/daily?appId=';
+  private baseUrl = '/weather-service/data/2.5/forecast/daily?appId=';
   constructor(public http: Http) { }
   
   /**

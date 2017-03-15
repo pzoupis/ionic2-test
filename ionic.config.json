@@ -5,11 +5,11 @@
   "typescript": true,
   "proxies": [
     {
-      "path": "/weather",
+      "path": "/weather-service",
       "proxyUrl": "http://api.openweathermap.org"
     },
     {
-      "path": "/autocomplete",
+      "path": "/autocomplete-service",
       "proxyUrl": "https://maps.googleapis.com"
     }
   ]

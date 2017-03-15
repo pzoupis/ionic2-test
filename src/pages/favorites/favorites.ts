@@ -3,6 +3,7 @@ import { Storage } from '@ionic/storage';
 import { NavController, ViewController, Platform, ToastController } from 'ionic-angular';
 
 import { HomePage } from '../home/home';
+import { WeatherPage } from '../weather/weather';
 
 @Component({
   selector: 'page-favorites',
@@ -42,6 +43,9 @@ export class FavoritesPage {
    */
   addCity() {
     this.navController.push(HomePage);
+  }
+  showWeather(city: string) {
+    this.navController.push(WeatherPage, {city: city});
   }
 
   /**
