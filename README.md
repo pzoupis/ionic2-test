@@ -20,7 +20,11 @@ You can preview the app with [Ionic View](http://view.ionic.io/) using APP ID
 To build the app you need
 * ionic 2 and cordova
 ```
-npm install -g ionic cordova
+$ npm install -g ionic cordova
+```
+* Cordova Geolocation plugin
+```
+$ ionic plugin add cordova-plugin-geolocation
 ```
 #### API keys
 You also need API keys from
@@ -48,4 +52,17 @@ $ npm install
 4. Run in browser
 ```
 $ ionic lab
+```
+
+#### Extra notes
+To run the app on a device you don't need the CORS request. So you have to edit the files below and add the full url:
+src/providers/autocomplete-service.ts
+```diff
+- /weather-service
++ http://api.openweathermap.org
+```
+src/providers/weather-service.ts
+```diff
+- /autocomplete-service
++ https://maps.googleapis.com
 ```
